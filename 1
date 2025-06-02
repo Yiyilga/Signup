@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Asistente Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="privacy-overlay" class="privacy-overlay">
+        <div class="privacy-modal">
+            <h2>¡Aviso Importante de Privacidad!</h2>
+            <p>Tu privacidad es nuestra prioridad. Por favor, selecciona cómo quieres que gestionemos tus datos:</p>
+            <div class="privacy-options">
+                <button id="store-data" class="privacy-button">Almacenar mis datos de forma segura</button>
+                <button id="delete-on-close" class="privacy-button">Borrar datos al cerrar la app/página</button>
+                <button id="never-store" class="privacy-button">Nunca almacenar mis datos</button>
+            </div>
+            <p class="privacy-note">Al continuar, aceptas las políticas de privacidad y condiciones de uso de la aplicación, según tu selección.</p>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="placeholder-logo.png" alt="Logo de la Aplicación">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="nav-item active" data-section="dashboard">📊 Dashboard</a></li>
+                <li><a href="#" class="nav-item" data-section="sales">💰 Ventas</a></li>
+                <li><a href="#" class="nav-item" data-section="social-media">📱 Redes Sociales</a></li>
+                <li><a href="#" class="nav-item" data-section="tasks">✅ Tareas Automatizadas</a></li>
+                <li><a href="#" class="nav-item" data-section="settings">⚙️ Configuración</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <h1 id="current-section-title">Dashboard</h1>
+            <div class="user-profile">
+                <span>Hola, Usuario!</span>
+                <img src="placeholder-avatar.png" alt="Avatar de Usuario">
+            </div>
+        </header>
+
+        <section id="dashboard" class="content-section active">
+            <h2>Vista General del Negocio</h2>
+            <div class="business-overview">
+                <div class="metric-card">
+                    <h3>Ingresos Netos</h3>
+                    <p class="value green">$5,200.00</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Gastos Totales</h3>
+                    <p class="value red">$1,800.00</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Objetos Vendidos</h3>
+                    <p class="value">150</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Horas Ahorradas</h3>
+                    <p class="value">45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Progreso de Ganancias/Pérdidas (Últimos 30 días)</h3>
+                <canvas id="profitLossChart"></canvas>
+            </div>
+
+            <div class="business-structure">
+                <h3>Estructura de Tu Negocio</h3>
+                <p>Aquí se mostrará un resumen de la estructura de tu negocio, con detalles que añadas.</p>
+                </div>
+        </section>
+
+        <section id="sales" class="content-section">
+            <h2>Gestión de Ventas</h2>
+            <p>Aquí podrás registrar y gestionar tus ventas, ingresos y transacciones.</p>
+            <div class="sales-metrics">
+                <div class="sales-flow">
+                    <h3>Flujo de Dinero</h3>
+                    <div class="flow-display">
+                        <span class="income">Entradas: $10,000</span>
+                        <span class="outcome">Salidas: $3,000</span>
+                        <span class="balance">Balance: $7,000</span>
+                    </div>
+                </div>
+                <div class="recent-transactions">
+                    <h3>Transacciones Recientes</h3>
+                    <ul>
+                        <li>Venta de Auto: $25,000 <span class="type-in">IN</span></li>
+                        <li>Compra de Suministros: $500 <span class="type-out">OUT</span></li>
+                        <li>Venta de Joya: $1,200 <span class="type-in">IN</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="social-media" class="content-section">
+            <h2>Asistente de Redes Sociales</h2>
+            <p>Obtén ideas, optimiza tus publicaciones y aumenta tu alcance.</p>
+            <div class="social-features">
+                <div class="feature-card">
+                    <h4>Generador de Ideas de Contenido</h4>
+                    <p>Obtén sugerencias para tus próximas publicaciones en Instagram, X, Discord.</p>
+                    <button class="action-button">Generar Ideas</button>
+                </div>
+                <div class="feature-card">
+                    <h4>Análisis de Algoritmo</h4>
+                    <p>Recibe tips para mejorar tu visibilidad en las plataformas.</p>
+                    <button class="action-button">Analizar</button>
+                </div>
+                <div class="feature-card">
+                    <h4>Programador de Publicaciones</h4>
+                    <p>Programa tus posts para que se publiquen automáticamente.</p>
+                    <button class="action-button">Programar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasks" class="content-section">
+            <h2>Tareas Automatizadas</h2>
+            <p>Configura la automatización de tareas sencillas y complejas.</p>
+            <div class="task-list">
+                <h4>Tareas en Curso</h4>
+                <ul>
+                    <li>Automatizar respuestas a preguntas frecuentes (Telegram)</li>
+                    <li>Generar informe mensual de ventas</li>
+                    <li>Monitorear menciones en Twitter</li>
+                </ul>
+                <button class="action-button">Crear Nueva Tarea</button>
+            </div>
+        </section>
+
+        <section id="settings" class="content-section">
+            <h2>Configuración</h2>
+            <p>Gestiona tu perfil, preferencias y opciones de privacidad.</p>
+            </section>
+    </main>
+
+    <button id="assistant-button" class="assistant-button">
+        <img src="microphone-icon.png" alt="Asistente de Voz">
+    </button>
+
+    <div id="assistant-bubble" class="assistant-bubble hidden">
+        <p id="assistant-message">Hola, ¿en qué puedo ayudarte hoy?</p>
+        <div class="input-area">
+            <input type="text" id="assistant-text-input" placeholder="Escribe tu pregunta...">
+            <button id="send-message-button">Enviar</button>
+            <button id="voice-input-button">🎙️</button>
+        </div>
+        <button id="close-assistant-bubble">✖️</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
